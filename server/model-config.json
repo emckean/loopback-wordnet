@@ -1,0 +1,128 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "Senses": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Dict": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Casedwords": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Adjpositions": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Adjectiveswithpositions": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Lexdomains": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Lexlinks": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Linktypes": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Morphmaps": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Morphology": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Morphs": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Postypes": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Samples": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Samplesets": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Semlinks": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Sensesxlexlinksxsenses": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Sensesxsemlinksxsenses": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Sensesxsynsets": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Synsets": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Synsetsxsemlinksxsynsets": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Verbswithframes": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Vframemaps": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Vframes": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Vframesentencemaps": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Vframesentences": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Words": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Wordsxsenses": {
+    "dataSource": "wordNet",
+    "public": true
+  },
+  "Wordsxsensesxsynsets": {
+    "dataSource": "wordNet",
+    "public": true
+  }
+}

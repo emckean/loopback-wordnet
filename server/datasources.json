@@ -1,0 +1,12 @@
+{
+  "wordNet": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "mysql://root:yourSQL@localhost/wordNet",
+    "database": "wordNet",
+    "password": "yourSQL",
+    "name": "wordNet",
+    "user": "root",
+    "connector": "mysql"
+  }
+}
