@@ -11,7 +11,6 @@
   "properties": {
     "wordid": {
       "type": "Number",
-      "id": 1,
       "required": true,
       "length": null,
       "precision": 10,
@@ -27,6 +26,7 @@
     },
     "lemma": {
       "type": "String",
+      "id": 1,
       "required": true,
       "length": 80,
       "precision": null,
@@ -46,8 +46,7 @@
     "dicts": {
       "type": "hasMany",
       "model": "Dict",
-      "foreignKey": "wordid",
-      "through": "Senses"
+      "foreignKey": "lemma"
     }
   },
   "acls": [],

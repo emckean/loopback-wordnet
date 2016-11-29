@@ -11,6 +11,7 @@
   "properties": {
     "synsetid": {
       "type": "Number",
+      "id": true,
       "required": false,
       "length": null,
       "precision": 10,
@@ -26,7 +27,6 @@
     },
     "wordid": {
       "type": "Number",
-      "id": true,
       "required": true,
       "length": null,
       "precision": 10,
@@ -223,11 +223,10 @@
   },
   "validations": [],
   "relations": {
-    "words": {
-      "type": "hasOne",
-      "model": "Words",
-      "foreignKey": "wordid",
-      "through": "Senses"
+    "synonyms": {
+      "type": "hasMany",
+      "model": "Wordsxsensesxsynsets",
+      "foreignKey": "synsetid"
     }
   },
   "acls": [],
