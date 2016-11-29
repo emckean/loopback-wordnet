@@ -18,7 +18,9 @@ possible tool for relations: https://github.com/savsharma2/loopback-sql-create-m
     "idInjection": false,
    then figure out what the key is for the model, e.g. "wordid" and then add "id": "true",
 
-  slc start
+  slc start 
+
+  USE nodemon .
 
   #relationships
   Words hasMany Senses
@@ -43,6 +45,13 @@ debugging relationships: DEBUG=loopback:connector:mysql,loopback:relations node 
 
 ###Using Explorer
 where filter syntax; `{"where":{"lemma":"cat"}}`
+
+{"include": { 
+        "relation": "dicts", 
+        "where": {"lemma": "mustard"}
+      }}
+
+      {"where": {"lemma": {"neq": "bountiful"}}}
 
 ###wordnet notes
 adjpositions: predicate, attributive and immediately postnominal (p, a, ip)
@@ -72,3 +81,17 @@ order by table_name,ordinal_position
 get link to wordnet sql (http://wnsql.sourceforge.net/)
 instructions for installing mysql, importing wordnet
 **read the license**
+
+###TODOS
+-- words->>dicts has many rel -- changed key to lemma on 11/28
+-- for synonyms words-->dicts-->senses, need to figure out the key, b/c no lemma in senses, maybe wordsxsenses?
+-- dict has synsetid, wordsxsensesxsynsets has synsetid, can do hasmany? change id of dict to synsetid, 
+--- THIS WORKS: search is GET /Words/{lemma}/dicts, with filter {"include": {          "relation": "wordsxsensesxsynsets"   }}
+-- next steps: filter out synonyms with same lemma
+
+-- casedwords, morphology (word(lemma)==>morph(lemma)) [523 abet] word has many morphology? 
+-- lexlinks for all relations other than synonyms word1, word2, relation type?
+
+###some examples
+58883 -- good
+16516 -- bountiful
