@@ -26,7 +26,7 @@
     },
     "lemma": {
       "type": "String",
-      "id": 1,
+      "id": true,
       "required": true,
       "length": 80,
       "precision": null,
@@ -47,6 +47,16 @@
       "type": "hasMany",
       "model": "Dict",
       "foreignKey": "lemma"
+    },
+    "morphs": {
+      "type": "hasMany",
+      "model": "Morphology",
+      "foreignKey": "lemma"
+    },
+    "cases": {
+      "type": "hasMany",
+      "model": "Casedwords",
+      "foreignKey": "wordid"
     }
   },
   "acls": [],

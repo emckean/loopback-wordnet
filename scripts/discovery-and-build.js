@@ -8,10 +8,6 @@ var outputPath = path.resolve(__dirname, '../common/models');
 var dataSource = app.dataSources.wordNet;
 
 var tableArray = [
-'lexlinks',
-'linktypes',
-'morphmaps',
-'morphs',
 'postypes',
 'samples',
 'samplesets',

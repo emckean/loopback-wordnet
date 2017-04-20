@@ -1,4 +1,18 @@
-here are some notes for you
+to start mySQL locally: 
+sudo /usr/local/mysql/support-files/mysql.server start
+pwd is laptop pwd
+to stop mySQl locally: 
+sudo /usr/local/mysql/support-files/mysql.server start
+to run without pwd
+sudo /usr/local/mysql/support-files/mysql.server start --skip-grant-tables
+
+show databases;
+
+here are some notes for you!
+
+4/20:
+TODO Next
+ look at this, to get models with different foreign keys: http://stackoverflow.com/questions/26802071/loopback-relationship-on-non-id-field
 
 to build models from mysql: discovery-and-build.js
 does it do relations? I don't know!
@@ -45,13 +59,19 @@ debugging relationships: DEBUG=loopback:connector:mysql,loopback:relations node 
 
 ###Using Explorer
 where filter syntax; `{"where":{"lemma":"cat"}}`
-
-{"include": { 
-        "relation": "dicts", 
-        "where": {"lemma": "mustard"}
-      }}
-
-      {"where": {"lemma": {"neq": "bountiful"}}}
+how to remove word that's part of the synonym
+{
+	"include": {
+		"relation": "synonyms",
+		"scope": {
+			"where": {
+				"lemma": {
+					"nin": ["bountiful"]
+				}
+			}
+		}
+	}
+}
 
 ###wordnet notes
 adjpositions: predicate, attributive and immediately postnominal (p, a, ip)
@@ -86,7 +106,8 @@ instructions for installing mysql, importing wordnet
 -- words->>dicts has many rel -- changed key to lemma on 11/28
 -- for synonyms words-->dicts-->senses, need to figure out the key, b/c no lemma in senses, maybe wordsxsenses?
 -- dict has synsetid, wordsxsensesxsynsets has synsetid, can do hasmany? change id of dict to synsetid, 
---- THIS WORKS: search is GET /Words/{lemma}/dicts, with filter {"include": {          "relation": "wordsxsensesxsynsets"   }}
+--- THIS WORKS: search is GET /Words/{lemma}/dicts, with filter {"include": {          "relation": "synonyms"   }}
+-- to set primary key in model it must be "id": true, not "id": one
 -- next steps: filter out synonyms with same lemma
 
 -- casedwords, morphology (word(lemma)==>morph(lemma)) [523 abet] word has many morphology? 

@@ -26,6 +26,7 @@
     },
     "wordid": {
       "type": "Number",
+      "id" : "true",
       "required": true,
       "length": null,
       "precision": 10,
