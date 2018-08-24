@@ -113,6 +113,15 @@ instructions for installing mysql, importing wordnet
 -- casedwords, morphology (word(lemma)==>morph(lemma)) [523 abet] word has many morphology? 
 -- lexlinks for all relations other than synonyms word1, word2, relation type?
 
+multilevel: 
+https://stackoverflow.com/questions/29104149/multi-level-include-filter-with-loopback-js
+
+
 ###some examples
 58883 -- good
 16516 -- bountiful
+
+
+### mysql
+show databases;
+use wordNet;

@@ -52,11 +52,6 @@
       "type": "hasMany",
       "model": "Morphology",
       "foreignKey": "lemma"
-    },
-    "cases": {
-      "type": "hasMany",
-      "model": "Casedwords",
-      "foreignKey": "wordid"
     }
   },
   "acls": [],
